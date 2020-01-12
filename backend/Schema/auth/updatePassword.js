@@ -1,4 +1,4 @@
-let schema = {
+const schema = {
   required: ['password', 'new_password'],
   properties: {
     password: { type: 'string', format: 'password' },
