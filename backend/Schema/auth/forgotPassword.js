@@ -3,19 +3,18 @@ const schema = {
   properties: {
     email: {
       type: 'string',
-      pattern:
-        '^[a-z]+\\.[0-9]{2}[a-z]{2}[0-9]{4}@([a-z].\\.)?iitism\\.ac\\.in$',
-    },
+      pattern: '^[a-z]+.[0-9]{2}[a-z]{2}[0-9]{4}@([a-z]{2,4}.)?iitism.ac.in$'
+    }
   },
   errorMessage: {
     required: {
-      email: 'Email required',
+      email: 'Email required'
     },
     properties: {
-      email: 'Invalid email',
+      email: 'Invalid email'
     },
-    _: 'Invalid data',
-  },
+    _: 'Invalid data'
+  }
 };
 
 module.exports = schema;

@@ -207,14 +207,21 @@ UPDATE RESTRICT;
 -- Table structure for table `groups`
 --
 
-CREATE TABLE `groups` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
+CREATE TABLE `groups`
+(
+  `id` int
+(11) NOT NULL,
+  `name` varchar
+(255) NOT NULL,
   `description` text NOT NULL,
-  `confidential` tinyint(1) NOT NULL,
-  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
-  `updated_at` datetime NOT NULL DEFAULT current_timestamp(),
-  `created_by` varchar(255) NOT NULL
+  `confidential` tinyint
+(1) NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp
+(),
+  `updated_at` datetime NOT NULL DEFAULT current_timestamp
+(),
+  `created_by` varchar
+(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 COMMIT;
 --
@@ -225,7 +232,8 @@ COMMIT;
 -- Indexes for table `groups`
 --
 ALTER TABLE `groups`
-  ADD PRIMARY KEY (`id`);
+ADD PRIMARY KEY
+(`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -235,18 +243,25 @@ ALTER TABLE `groups`
 -- AUTO_INCREMENT for table `groups`
 --
 ALTER TABLE `groups`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int
+(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
-- --------------------------------------------------------
+-
+--------------------------------------------------------
 
 --
 -- Table structure for table `UserGroups`
 --
 
-CREATE TABLE `UserGroups` (
-  `id` int(11) NOT NULL,
-  `username` varchar(255) NOT NULL,
-  `group_id` int(11) NOT NULL,
-  `admin` int(5) NOT NULL
+CREATE TABLE `UserGroups`
+(
+  `id` int
+(11) NOT NULL,
+  `username` varchar
+(255) NOT NULL,
+  `group_id` int
+(11) NOT NULL,
+  `admin` int
+(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 COMMIT;
